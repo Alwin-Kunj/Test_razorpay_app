@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { Transaction, TransactionStatus } from "@/types/transaction";
+import type { Transaction } from "@/types/transaction";
 
 type SortField = "createdAt" | "amountInPaise" | "customerName" | "id";
 

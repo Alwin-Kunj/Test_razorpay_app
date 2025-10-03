@@ -60,9 +60,10 @@ export async function GET(request: Request) {
     ? [sort.slice(1), -1]
     : [sort, 1];
 
-  data.sort((a: any, b: any) => {
-    const av = a[key];
-    const bv = b[key];
+  const sortKey = key as keyof Transaction;
+  data.sort((a, b) => {
+    const av = a[sortKey] as unknown as string | number;
+    const bv = b[sortKey] as unknown as string | number;
     if (av < bv) return -1 * dir;
     if (av > bv) return 1 * dir;
     return 0;

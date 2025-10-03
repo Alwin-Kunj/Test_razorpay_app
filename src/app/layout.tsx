@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -32,7 +33,7 @@ export default function RootLayout({
           <aside className="hidden md:block border-r border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
             <div className="p-4 text-xl font-semibold">Admin</div>
             <nav className="px-2 space-y-1">
-              <a href="/" className="block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800">Dashboard</a>
+              <Link href="/" className="block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800">Dashboard</Link>
               <a href="#" className="block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800">Payments</a>
               <a href="#" className="block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800">Settlements</a>
               <a href="#" className="block rounded px-3 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800">Customers</a>
